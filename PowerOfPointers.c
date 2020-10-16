@@ -13,22 +13,22 @@ int main(){
 		
 		con c1;
 
-		char* ptrc=&c1.name;
+		char* ptrc=c1.name;
 		long* ptri=&c1.num;
 		int v=0;
 		int z=0;
 	
 		for(int w=0;w<120;w=w+24){
 			printf("Enter name: ");
-			scanf("%s",(ptrc+w));
+			scanf("%s",&(ptrc[w]));
 			printf("Enter num: ");
-			scanf("%ld",(ptri+v));
+			scanf("%ld",&ptri[v]);
 			v=v+3;
 		}
 		
 		for(int yo=0;yo<120;yo=yo+24){
-			printf("Name: %s\t",(ptrc+yo));
-			printf("Number: %ld\n",*(ptri+z));
+			printf("Name: %s\t",&(ptrc[yo]));
+			printf("Number: %ld\n",ptri[z]);
 			z=z+3;
 		}
 
